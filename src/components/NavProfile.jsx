@@ -4,18 +4,23 @@ import { Link } from "react-router-dom";
 import User from '../components/User'
 import './NavProfile.css';
 import refresh2 from '../assets/refresh2.png';
+import users from '../assets/users'
 
 const NavProfile = () => {
-    const [users, setUsers] = useState([]);
     const [trigger, setTrigger] = useState();
 
-    useEffect(() => {
-        const url = "https://a.nacapi.com/sainstgram.users";
-        Axios
-            .get(url)
-            .then((response) => setUsers(response.data))
-            .catch(error => console.log(`API call error: ${error}`))
-    }, []);
+        //nacapi shut down looking for a solution to replace it
+
+
+    // const [users, setUsers] = useState([]);
+
+    // useEffect(() => {
+    //     const url = "https://a.nacapi.com/sainstgram.users";
+    //     Axios
+    //         .get(url)
+    //         .then((response) => setUsers(response.data))
+    //         .catch(error => console.log(`API call error: ${error}`))
+    // }, []);
 
     const randomProfile = [];
     function getRandomUsers() {
